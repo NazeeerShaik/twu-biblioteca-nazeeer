@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1835e754-c18b-4cd6-ad3a-376c98e9f2e2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TWU_Biblioteca-master.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/biblioteca.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/junit-4.11.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/TWU_Biblioteca-master/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/test/TWU_Biblioteca-master/com/twu/biblioteca/ExampleTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/ExampleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,21 +58,21 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1638" height="255" key="GridCell.Tab.0.bottom" timestamp="1581068927063">
+    <state width="1638" height="255" key="GridCell.Tab.0.bottom" timestamp="1581069236155">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="255" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1581068927063" />
-    <state width="1638" height="255" key="GridCell.Tab.0.center" timestamp="1581068927062">
+    <state width="1638" height="255" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1581069236155" />
+    <state width="1638" height="255" key="GridCell.Tab.0.center" timestamp="1581069236154">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="255" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1581068927062" />
-    <state width="1638" height="255" key="GridCell.Tab.0.left" timestamp="1581068927061">
+    <state width="1638" height="255" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1581069236154" />
+    <state width="1638" height="255" key="GridCell.Tab.0.left" timestamp="1581069236153">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="255" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1581068927061" />
-    <state width="1638" height="255" key="GridCell.Tab.0.right" timestamp="1581068927063">
+    <state width="1638" height="255" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1581069236153" />
+    <state width="1638" height="255" key="GridCell.Tab.0.right" timestamp="1581069236154">
       <screen x="0" y="23" width="1680" height="952" />
     </state>
-    <state width="1638" height="255" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1581068927063" />
+    <state width="1638" height="255" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1581069236154" />
   </component>
 </project>
