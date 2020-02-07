@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1835e754-c18b-4cd6-ad3a-376c98e9f2e2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TWU_Biblioteca-master.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/biblioteca.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-4.11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/TWU_Biblioteca-master/com/twu/biblioteca/BibliotecaApp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/test/TWU_Biblioteca-master/com/twu/biblioteca/ExampleTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/twu/biblioteca/BibliotecaApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/com/twu/biblioteca/ExampleTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1XTRQSLkqVMSAyKSAKDWRDnDSTa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="ExampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="TWU_Biblioteca-master" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.twu.biblioteca.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.twu.biblioteca" />
+      <option name="MAIN_CLASS_NAME" value="com.twu.biblioteca.ExampleTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ExampleTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1835e754-c18b-4cd6-ad3a-376c98e9f2e2" name="Default Changelist" comment="" />
+      <created>1581068081764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581068081764</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1638" height="255" key="GridCell.Tab.0.bottom" timestamp="1581068927063">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1638" height="255" key="GridCell.Tab.0.bottom/0.23.1680.952@0.23.1680.952" timestamp="1581068927063" />
+    <state width="1638" height="255" key="GridCell.Tab.0.center" timestamp="1581068927062">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1638" height="255" key="GridCell.Tab.0.center/0.23.1680.952@0.23.1680.952" timestamp="1581068927062" />
+    <state width="1638" height="255" key="GridCell.Tab.0.left" timestamp="1581068927061">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1638" height="255" key="GridCell.Tab.0.left/0.23.1680.952@0.23.1680.952" timestamp="1581068927061" />
+    <state width="1638" height="255" key="GridCell.Tab.0.right" timestamp="1581068927063">
+      <screen x="0" y="23" width="1680" height="952" />
+    </state>
+    <state width="1638" height="255" key="GridCell.Tab.0.right/0.23.1680.952@0.23.1680.952" timestamp="1581068927063" />
+  </component>
+</project>
