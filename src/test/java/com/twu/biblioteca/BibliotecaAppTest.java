@@ -27,8 +27,9 @@ public class BibliotecaAppTest {
         BibliotecaApp.main(new String[]{});
 
         verify(out).println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
-        verify(out).println("1.Planning Extreme Programming");
-        verify(out).println("2.Domain Specific Languages");
+        verify(out).println("NAME\tAUTHOR\tYEAR");
+        verify(out).println("Planning Extreme Programming\tKent Beck\t2000");
+        verify(out).println("Domain Specific Languages\tMartin Fowler\t2010");
     }
 
 }

@@ -1,26 +1,25 @@
 package com.twu.biblioteca;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static java.util.Arrays.asList;
 
 public class BibliotecaApp {
-    private final List<String> books = new ArrayList<>(asList("1.Planning Extreme Programming", "2.Domain Specific Languages"));
+    private static final List<String> books = asList("Planning Extreme Programming", "Domain Specific Languages");
 
     public static void main(String[] args) {
         new BibliotecaApp().start();
-    }
-
-    public void start() {
-        String welcomeMessage = "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
-        System.out.println(welcomeMessage);
         viewBooks();
     }
 
-    private void viewBooks() {
-        for (String book : books) {
-            System.out.println(book);
-        }
+    private  void start() {
+        String welcomeMessage = "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
+        System.out.println(welcomeMessage);
+    }
+
+    private static void viewBooks() {
+        System.out.println("NAME\tAUTHOR\tYEAR");
+        Library library = new Library();
+        library.viewListOfBooks();
     }
 }
