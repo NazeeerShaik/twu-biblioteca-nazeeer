@@ -8,6 +8,7 @@ public class Menu {
 
     private void setOptions(){
         options.put(1,"List of books");
+        options.put(2,"Quit");
     }
     public void displayMenu(){
         options.forEach((key,value)-> System.out.println(key+" "+value));

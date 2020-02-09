@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import com.ginsberg.junit.exit.ExpectSystemExitWithStatus;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -10,7 +11,6 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
 public class BibliotecaAppTest {
-
     @Test
     void shouldDisplayWelcomeMessageOnAppStart() {
         PrintStream out = mock(PrintStream.class);
@@ -45,4 +45,11 @@ public class BibliotecaAppTest {
         verify(out).println("Please select a valid option!");
     }
 
+    @ParameterizedTest
+    @ValueSource(ints ={2})
+    @ExpectSystemExitWithStatus(0)
+    void shouldQuitFromApplicationIfOptionIsQuit(int optionNumber){
+
+        BibliotecaApp.getOption(optionNumber);
+    }
 }

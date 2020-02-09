@@ -13,8 +13,9 @@ public class BibliotecaApp {
         Menu menu = new Menu();
         menu.displayMenu();
     }
-    public static void getOption(int opinionNumber){
-        if(opinionNumber == 1) viewBooks();
+    public static void getOption(int optionNumber){
+        if(optionNumber == 1) viewBooks();
+        else if(optionNumber == 2) System.exit(0);
         else System.out.println("Please select a valid option!");
     }
     private  void start() {
