@@ -89,4 +89,18 @@ public class BibliotecaAppTest {
         verify(out).println("Sorry, that book is not available");
 
     }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"Planning Extreme Programming"})
+    void shouldAddBookFromBookListAfterReturn(String bookName) {
+        PrintStream out = mock(PrintStream.class);
+        System.setOut(out);
+
+        BibliotecaApp.returnBook(bookName);
+
+        verify(out).println("NAME\tAUTHOR\tYEAR");
+        verify(out).println("Domain Specific Languages\tMartin Fowler\t2010");
+        verify(out).println("Planning Extreme Programming\tKent Beck\t2000");
+
+    }
 }

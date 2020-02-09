@@ -34,4 +34,13 @@ public class Library {
             book.view();
         }
     }
+
+    public void addBook(String bookName) {
+        for(Book book:collections){
+            if(book.getName() == bookName){
+                collections.remove(book);
+                bookList.add(book);
+            }
+        }
+    }
 }

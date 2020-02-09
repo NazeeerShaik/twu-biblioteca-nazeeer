@@ -10,6 +10,7 @@ public class Menu {
         options.put(1, "List of books");
         options.put(2, "Quit");
         options.put(3, "check out");
+        options.put(4,"return");
     }
 
     public void displayMenu() {

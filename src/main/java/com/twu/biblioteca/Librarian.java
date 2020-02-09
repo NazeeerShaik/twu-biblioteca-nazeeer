@@ -10,4 +10,8 @@ public class Librarian {
     public boolean prepare(String bookName) {
          return library.addToCollections(bookName);
     }
+
+    public void addBook(String bookName) {
+        library.addBook(bookName);
+    }
 }
