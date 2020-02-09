@@ -1,24 +1,31 @@
 package com.twu.biblioteca;
 
-import java.util.List;
-
-import static java.util.Arrays.asList;
-import static java.util.Arrays.mismatch;
+import java.util.Scanner;
 
 public class BibliotecaApp {
-    private static final List<String> books = asList("Planning Extreme Programming", "Domain Specific Languages");
-
     public static void main(String[] args) {
-        new BibliotecaApp().start();
+        start();
         Menu menu = new Menu();
         menu.displayMenu();
+        Scanner in = new Scanner(System.in);
+        int option = in.nextInt();
+        getOption(option);
     }
-    public static void getOption(int optionNumber){
-        if(optionNumber == 1) viewBooks();
-        else if(optionNumber == 2) System.exit(0);
-        else System.out.println("Please select a valid option!");
+
+    public static void getOption(int optionNumber) {
+        if (optionNumber == 1) viewBooks();
+        else if (optionNumber == 2) System.exit(0);
+        else if (optionNumber == 3) System.out.println("checkout");
+        else System.out.println("Please select a valid optionNumber!");
     }
-    private  void start() {
+
+    public static void checkOutBook(String bookName) {
+        Librarian librarian = new Librarian();
+        librarian.prepare(bookName);
+        viewBooks();
+    }
+
+    public static void start() {
         String welcomeMessage = "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";
         System.out.println(welcomeMessage);
     }

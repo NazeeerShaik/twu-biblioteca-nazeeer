@@ -16,7 +16,7 @@ public class BibliotecaAppTest {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        BibliotecaApp.main(new String[]{});
+        BibliotecaApp.start();
 
         verify(out).println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
     }
@@ -35,8 +35,8 @@ public class BibliotecaAppTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints ={0})
-    void shouldDisplayErrorNotificationMessageIfOptionIsInvalid(int optionNumber){
+    @ValueSource(ints = {0})
+    void shouldDisplayErrorNotificationMessageIfOptionIsInvalid(int optionNumber) {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
@@ -46,10 +46,23 @@ public class BibliotecaAppTest {
     }
 
     @ParameterizedTest
-    @ValueSource(ints ={2})
+    @ValueSource(ints = {2})
     @ExpectSystemExitWithStatus(0)
-    void shouldQuitFromApplicationIfOptionIsQuit(int optionNumber){
+    void shouldQuitFromApplicationIfOptionIsQuit(int optionNumber) {
 
         BibliotecaApp.getOption(optionNumber);
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"Planning Extreme Programming"})
+    void shouldRemoveBookFromBookListAfterCheckOut(String bookName) {
+        PrintStream out = mock(PrintStream.class);
+        System.setOut(out);
+
+        BibliotecaApp.checkOutBook(bookName);
+
+        verify(out).println("NAME\tAUTHOR\tYEAR");
+        verify(out).println("Domain Specific Languages\tMartin Fowler\t2010");
+
     }
 }

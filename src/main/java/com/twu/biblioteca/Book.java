@@ -12,7 +12,11 @@ public class Book {
         this.year = year;
     }
 
-    public void view(){
-        System.out.println(this.name+"\t"+this.author+"\t"+this.year);
+    public String getName() {
+        return name;
+    }
+
+    public void view() {
+        System.out.println(this.name + "\t" + this.author + "\t" + this.year);
     }
 }
