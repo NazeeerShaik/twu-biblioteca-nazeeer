@@ -65,4 +65,16 @@ public class BibliotecaAppTest {
         verify(out).println("Domain Specific Languages\tMartin Fowler\t2010");
 
     }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"Planning Extreme Programming"})
+    void shouldReturnSuccessMessageOnCheckoutOfBook(String bookName) {
+        PrintStream out = mock(PrintStream.class);
+        System.setOut(out);
+
+        BibliotecaApp.checkOutBook(bookName);
+
+        verify(out).println("Thank you! Enjoy the book");
+
+    }
 }

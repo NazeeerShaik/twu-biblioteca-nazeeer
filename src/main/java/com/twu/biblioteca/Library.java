@@ -19,13 +19,15 @@ public class Library {
         }
     }
 
-    public void addToCollections(String bookName) {
+    public boolean addToCollections(String bookName) {
         for (Book book : bookList) {
             if (bookName.equals(book.getName())) {
                 collections.add(book);
                 bookList.remove(book);
+                return true;
             }
         }
+        return false;
     }
     public void viewListOfCollectedBooks(){
         for(Book book:collections){

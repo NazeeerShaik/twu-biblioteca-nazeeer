@@ -7,7 +7,7 @@ public class Librarian {
         this.library = new Library();
     }
 
-    public void prepare(String bookName) {
-        library.addToCollections(bookName);
+    public boolean prepare(String bookName) {
+         return library.addToCollections(bookName);
     }
 }
