@@ -15,6 +15,7 @@ public class BibliotecaApp {
     }
     public static void getOption(int opinionNumber){
         if(opinionNumber == 1) viewBooks();
+        else System.out.println("Please select a valid option!");
     }
     private  void start() {
         String welcomeMessage = "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!";

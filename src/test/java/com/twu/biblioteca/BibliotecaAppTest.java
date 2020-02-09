@@ -34,4 +34,15 @@ public class BibliotecaAppTest {
         verify(out).println("Domain Specific Languages\tMartin Fowler\t2010");
     }
 
+    @ParameterizedTest
+    @ValueSource(ints ={0})
+    void shouldDisplayErrorNotificationMessageIfOptionIsInvalid(int optionNumber){
+        PrintStream out = mock(PrintStream.class);
+        System.setOut(out);
+
+        BibliotecaApp.getOption(optionNumber);
+
+        verify(out).println("Please select a valid option!");
+    }
+
 }
