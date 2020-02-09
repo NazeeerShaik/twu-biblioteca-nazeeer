@@ -16,7 +16,7 @@ public class BibliotecaApp {
         if (optionNumber == 1) viewBooks();
         else if (optionNumber == 2) System.exit(0);
         else if (optionNumber == 3) System.out.println("checkout");
-        else System.out.println("Please select a valid optionNumber!");
+        else System.out.println("Please select a valid option!");
     }
 
     public static void checkOutBook(String bookName) {
