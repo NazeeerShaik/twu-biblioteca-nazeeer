@@ -21,9 +21,8 @@ public class BibliotecaApp {
 
     public static void checkOutBook(String bookName) {
         Librarian librarian = new Librarian();
-        if(librarian.prepare(bookName)){
-            System.out.println("Thank you! Enjoy the book");
-        }
+        if(librarian.prepare(bookName)) System.out.println("Thank you! Enjoy the book");
+        else System.out.println("Sorry, that book is not available");
         viewBooks();
     }
 

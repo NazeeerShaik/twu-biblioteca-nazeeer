@@ -77,4 +77,16 @@ public class BibliotecaAppTest {
         verify(out).println("Thank you! Enjoy the book");
 
     }
+
+    @ParameterizedTest
+    @ValueSource(strings = {"NoSQL Distilled"})
+    void shouldReturnUnSuccessMessageOnCheckoutOfBook(String bookName) {
+        PrintStream out = mock(PrintStream.class);
+        System.setOut(out);
+
+        BibliotecaApp.checkOutBook(bookName);
+
+        verify(out).println("Sorry, that book is not available");
+
+    }
 }
