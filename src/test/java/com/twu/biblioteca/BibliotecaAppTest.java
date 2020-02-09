@@ -1,6 +1,8 @@
 package com.twu.biblioteca;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.io.PrintStream;
 
@@ -19,14 +21,14 @@ public class BibliotecaAppTest {
         verify(out).println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
     }
 
-    @Test
-    void shouldDisplayListOfAllLibraryBooksAfterWelcomeMessage() {
+    @ParameterizedTest
+    @ValueSource(ints = {1})
+    void shouldDisplayListOfAllLibraryBooksAfterSelectingOptionOne(int optionNumber) {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        BibliotecaApp.main(new String[]{});
+        BibliotecaApp.getOption(optionNumber);
 
-        verify(out).println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore!");
         verify(out).println("NAME\tAUTHOR\tYEAR");
         verify(out).println("Planning Extreme Programming\tKent Beck\t2000");
         verify(out).println("Domain Specific Languages\tMartin Fowler\t2010");
