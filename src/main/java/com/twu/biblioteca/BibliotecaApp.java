@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class BibliotecaApp {
 
     private  Librarian librarian= new Librarian();
+    private static Library library = new Library();
+
     public static void main(String[] args) {
         start();
         Menu menu = new Menu();
@@ -15,7 +17,7 @@ public class BibliotecaApp {
     }
 
     public static void respondToOption(int optionNumber) {
-        if (optionNumber == 1) viewBooks();
+        if (optionNumber == 1) viewBooks(library);
         else if (optionNumber == 2) System.exit(0);
         else if (optionNumber == 3) System.out.println("checkout");
         else if (optionNumber == 4 ) System.out.println("return");
@@ -35,9 +37,7 @@ public class BibliotecaApp {
         System.out.println(welcomeMessage);
     }
 
-    private static void viewBooks() {
-        System.out.println("NAME\tAUTHOR\tYEAR");
-        Library library = new Library();
+    private static void viewBooks(Library library) {
         library.viewListOfBooks();
     }
 }

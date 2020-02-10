@@ -29,7 +29,6 @@ public class BibliotecaAppTest {
 
         BibliotecaApp.respondToOption(optionNumber);
 
-        verify(out).println("NAME\tAUTHOR\tYEAR");
         verify(out).println("Planning Extreme Programming\tKent Beck\t2000");
         verify(out).println("Domain Specific Languages\tMartin Fowler\t2010");
     }
