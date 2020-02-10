@@ -57,10 +57,11 @@ public class BibliotecaAppTest {
     @ParameterizedTest
     @ValueSource(strings = {"Planning Extreme Programming"})
     void shouldReturnSuccessMessageOnCheckoutOfBook(String bookName) {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        BibliotecaApp.checkOutBook(bookName);
+        bibliotecaApp.checkOutBook(bookName);
 
         verify(out).println("Thank you! Enjoy the book");
 
@@ -69,10 +70,11 @@ public class BibliotecaAppTest {
     @ParameterizedTest
     @ValueSource(strings = {"NoSQL Distilled"})
     void shouldReturnUnSuccessMessageOnCheckoutOfBook(String bookName) {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        BibliotecaApp.checkOutBook(bookName);
+        bibliotecaApp.checkOutBook(bookName);
 
         verify(out).println("Sorry, that book is not available");
 
@@ -81,11 +83,12 @@ public class BibliotecaAppTest {
     @ParameterizedTest
     @ValueSource(strings = {"Planning Extreme Programming"})
     void shouldDisplaySuccessMessageIfReturnIsValid(String bookName) {
+        BibliotecaApp bibliotecaApp = new BibliotecaApp();
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        BibliotecaApp.checkOutBook(bookName);
-        BibliotecaApp.returnBook(bookName);
+        bibliotecaApp.checkOutBook(bookName);
+        bibliotecaApp.returnBook(bookName);
 
         verify(out).println("Thank you! Enjoy the book");
         verify(out).println("Thank you for returning the book");
