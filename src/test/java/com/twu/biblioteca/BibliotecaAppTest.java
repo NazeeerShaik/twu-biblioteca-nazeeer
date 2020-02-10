@@ -53,18 +53,6 @@ public class BibliotecaAppTest {
         BibliotecaApp.getOption(optionNumber);
     }
 
-    @ParameterizedTest
-    @ValueSource(strings = {"Planning Extreme Programming"})
-    void shouldRemoveBookFromBookListAfterCheckOut(String bookName) {
-        PrintStream out = mock(PrintStream.class);
-        System.setOut(out);
-
-        BibliotecaApp.checkOutBook(bookName);
-
-        verify(out).println("NAME\tAUTHOR\tYEAR");
-        verify(out).println("Domain Specific Languages\tMartin Fowler\t2010");
-
-    }
 
     @ParameterizedTest
     @ValueSource(strings = {"Planning Extreme Programming"})
@@ -92,15 +80,17 @@ public class BibliotecaAppTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"Planning Extreme Programming"})
-    void shouldAddBookFromBookListAfterReturn(String bookName) {
+    void shouldDisplaySuccessMessageIfReturnIsValid(String bookName) {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
+        BibliotecaApp.checkOutBook(bookName);
         BibliotecaApp.returnBook(bookName);
 
-        verify(out).println("NAME\tAUTHOR\tYEAR");
-        verify(out).println("Domain Specific Languages\tMartin Fowler\t2010");
-        verify(out).println("Planning Extreme Programming\tKent Beck\t2000");
+        verify(out).println("Thank you! Enjoy the book");
+        verify(out).println("Thank you for returning the book");
 
     }
+
+
 }

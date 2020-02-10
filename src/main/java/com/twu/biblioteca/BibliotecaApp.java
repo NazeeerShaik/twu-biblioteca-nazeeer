@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class BibliotecaApp {
 
+    private static Librarian librarian= new Librarian();
+
     public static void main(String[] args) {
         start();
         Menu menu = new Menu();
@@ -22,15 +24,11 @@ public class BibliotecaApp {
     }
 
     public static void checkOutBook(String bookName) {
-        Librarian librarian = new Librarian();
         if(librarian.prepare(bookName)) System.out.println("Thank you! Enjoy the book");
         else System.out.println("Sorry, that book is not available");
-        viewBooks();
     }
     public static  void returnBook(String bookName){
-        Librarian librarian = new Librarian();
-        librarian.addBook(bookName);
-        viewBooks();
+        if(librarian.addBook(bookName)) System.out.println("Thank you for returning the book");
     }
 
     public static void start() {

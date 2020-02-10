@@ -11,7 +11,7 @@ public class Librarian {
          return library.addToCollections(bookName);
     }
 
-    public void addBook(String bookName) {
-        library.addBook(bookName);
+    public boolean addBook(String bookName) {
+        return library.addBook(bookName);
     }
 }

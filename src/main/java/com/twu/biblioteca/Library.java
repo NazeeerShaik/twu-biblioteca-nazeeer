@@ -35,12 +35,14 @@ public class Library {
         }
     }
 
-    public void addBook(String bookName) {
+    public boolean addBook(String bookName) {
         for(Book book:collections){
-            if(book.getName() == bookName){
-                collections.remove(book);
+            if(book.getName().equals(bookName)){
                 bookList.add(book);
+                collections.remove(book);
+                return true;
             }
         }
+        return false;
     }
 }
