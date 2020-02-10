@@ -14,6 +14,7 @@ public class Menu {
     }
 
     public void displayMenu() {
+        setOptions();
         options.forEach((key, value) -> System.out.println(key + " " + value));
     }
 }
