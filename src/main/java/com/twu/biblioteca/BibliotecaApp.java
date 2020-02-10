@@ -12,10 +12,10 @@ public class BibliotecaApp {
         menu.displayMenu();
         Scanner in = new Scanner(System.in);
         int option = in.nextInt();
-        getOption(option);
+        respondToOption(option);
     }
 
-    public static void getOption(int optionNumber) {
+    public static void respondToOption(int optionNumber) { //TODO::Response class
         if (optionNumber == 1) viewBooks();
         else if (optionNumber == 2) System.exit(0);
         else if (optionNumber == 3) System.out.println("checkout");

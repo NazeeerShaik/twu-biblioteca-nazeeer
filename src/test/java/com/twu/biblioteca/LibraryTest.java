@@ -27,6 +27,7 @@ class LibraryTest {
     void shouldAddToCollectionsAfterBookCheckout() {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
+
         Library library = new Library();
         library.viewListOfBooks();
 

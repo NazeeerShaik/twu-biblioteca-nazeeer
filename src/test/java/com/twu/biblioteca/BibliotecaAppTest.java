@@ -27,7 +27,7 @@ public class BibliotecaAppTest {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        BibliotecaApp.getOption(optionNumber);
+        BibliotecaApp.respondToOption(optionNumber);
 
         verify(out).println("NAME\tAUTHOR\tYEAR");
         verify(out).println("Planning Extreme Programming\tKent Beck\t2000");
@@ -40,7 +40,7 @@ public class BibliotecaAppTest {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        BibliotecaApp.getOption(optionNumber);
+        BibliotecaApp.respondToOption(optionNumber);
 
         verify(out).println("Please select a valid option!");
     }
@@ -50,7 +50,7 @@ public class BibliotecaAppTest {
     @ExpectSystemExitWithStatus(0)
     void shouldQuitFromApplicationIfOptionIsQuit(int optionNumber) {
 
-        BibliotecaApp.getOption(optionNumber);
+        BibliotecaApp.respondToOption(optionNumber);
     }
 
 

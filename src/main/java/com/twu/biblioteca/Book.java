@@ -19,4 +19,5 @@ public class Book {
     public void view() {
         System.out.println(this.name + "\t" + this.author + "\t" + this.year);
     }
+
 }
