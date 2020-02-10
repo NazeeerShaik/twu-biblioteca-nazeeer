@@ -13,7 +13,7 @@ public class Menu {
         options.put(4,"return");
     }
 
-    public void displayMenu() {
+    public void display() {
         setOptions();
         options.forEach((key, value) -> System.out.println(key + " " + value));
     }
