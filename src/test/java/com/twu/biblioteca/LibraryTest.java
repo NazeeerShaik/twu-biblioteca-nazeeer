@@ -12,7 +12,7 @@ import static org.mockito.Mockito.verify;
 class LibraryTest {
     @ParameterizedTest
     @ValueSource(strings = {"Planning Extreme Programming"})
-    void shouldRemoveBookFromBookListAfterCheckOut() {
+    void shouldRemoveBookFromBookListAfterCheckOut() { // TODO - we never did a checkout?
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
