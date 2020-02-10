@@ -17,7 +17,7 @@ class LibraryTest {
         System.setOut(out);
 
         Library library = new Library();
-        library.viewListOfBooks();
+        library.displayBooks();
 
         verify(out).println("Domain Specific Languages\tMartin Fowler\t2010");
 
@@ -29,7 +29,7 @@ class LibraryTest {
         System.setOut(out);
 
         Library library = new Library();
-        library.viewListOfBooks();
+        library.displayBooks();
 
         verify(out).println("Planning Extreme Programming\tKent Beck\t2000");
 

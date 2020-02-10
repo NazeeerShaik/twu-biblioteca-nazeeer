@@ -38,6 +38,6 @@ public class BibliotecaApp {
     }
 
     private static void viewBooks(Library library) {
-        library.viewListOfBooks();
+        library.displayBooks();
     }
 }
