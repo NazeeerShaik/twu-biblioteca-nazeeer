@@ -7,11 +7,11 @@ public class Librarian {
         this.library = new Library();
     }
 
-    public boolean prepare(String bookName) {
+    public boolean processCheckout(String bookName) {
          return library.addToCollections(bookName);
     }
 
-    public boolean addBook(String bookName) {
+    public boolean processReturn(String bookName) {
         return library.addBook(bookName);
     }
 }

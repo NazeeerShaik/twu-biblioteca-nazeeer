@@ -25,11 +25,11 @@ public class BibliotecaApp {
     }
 
     public void checkOutBook(String bookName) {
-        if(librarian.prepare(bookName)) System.out.println("Thank you! Enjoy the book");
+        if(librarian.processCheckout(bookName)) System.out.println("Thank you! Enjoy the book");
         else System.out.println("Sorry, that book is not available");
     }
     public void returnBook(String bookName){
-        if(librarian.addBook(bookName)) System.out.println("Thank you for returning the book");
+        if(librarian.processReturn(bookName)) System.out.println("Thank you for returning the book");
     }
 
     public static void start() {
