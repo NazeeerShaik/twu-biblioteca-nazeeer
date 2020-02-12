@@ -23,6 +23,12 @@ public class MovieManagerTest {
                 ", director='" + "James Cameron" + '\'' +
                 ", rating=" + 7.8 +
                 '}');
+        verify(out).println("Movie{" +
+                "year=" + 2019 +
+                ", name='" + "Avengers: Endgame" + '\'' +
+                ", director='" + "Russo brothers" + '\'' +
+                ", rating=" + 8.5 +
+                '}');
     }
 
     @Test
