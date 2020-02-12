@@ -26,7 +26,7 @@ public class Menu {
             String password = in.nextLine();
             Login login = new Login(libraryNumber, password);
             if (login.submit()){
-               librarian.checkout(libraryNumber, bookName);}
+               librarian.checkoutBook(libraryNumber, bookName);}
 
         } else if (option == returnBook) {
             String bookName = in.nextLine();

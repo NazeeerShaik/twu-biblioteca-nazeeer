@@ -68,7 +68,7 @@ class MenuTest {
         input("Refactoring\n123-4567\npassword");
         menu.respond(2);
 
-        input("Refactoring");
+        input("Refactoring\n123-4567\npassword");
         menu.respond(3);
 
         verify(out).println("Thank you! Enjoy the book");
@@ -80,7 +80,7 @@ class MenuTest {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        input("Hello");
+        input("Hello\n765-4321\nPASS");
         menu.respond(3);
 
         verify(out).println("That is not a valid book to return");

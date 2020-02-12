@@ -6,7 +6,7 @@ public class Librarian {
     private Map<String, Book> record = new HashMap<>();
     private Library library = new Library();
 
-    public void checkout(String libraryNumber, String bookName) {
+    public void checkoutBook(String libraryNumber, String bookName) {
         if (library.has(bookName)) {
             Book book = library.getBook(bookName);
             record.put(libraryNumber, book);

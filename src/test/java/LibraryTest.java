@@ -80,4 +80,42 @@ class LibraryTest {
                 ", authorName='" + "Martin Fowler" + '\'' +
                 '}');
     }
+
+    @Test
+    void shouldDisplayListOfMovies() {
+        PrintStream out = mock(PrintStream.class);
+        System.setOut(out);
+
+        library.showAllMovies();
+
+
+        verify(out).println("Movie{" +
+                "year=" + 2009 +
+                ", name='" + "Avatar" + '\'' +
+                ", director='" + "James Cameron" + '\'' +
+                ", rating=" + 7.8 +
+                '}');
+        verify(out).println("Movie{" +
+                "year=" + 2019 +
+                ", name='" + "Avengers: Endgame" + '\'' +
+                ", director='" + "Russo brothers" + '\'' +
+                ", rating=" + 8.5 +
+                '}');
+    }
+
+    @Test
+    void shouldAbleToCheckOutMovie() {
+        PrintStream out = mock(PrintStream.class);
+        System.setOut(out);
+
+        library.checkoutMovie("Avatar");
+        library.showAllMovies();
+
+        verify(out).println("Movie{" +
+                "year=" + 2019 +
+                ", name='" + "Avengers: Endgame" + '\'' +
+                ", director='" + "Russo brothers" + '\'' +
+                ", rating=" + 8.5 +
+                '}');
+    }
 }
