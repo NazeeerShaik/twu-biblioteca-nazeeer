@@ -25,7 +25,7 @@ class MenuTest {
     @Test
     @ExpectSystemExitWithStatus(0)
     void shouldQuitIfOptionIsFour() {
-        menu.respond(4);
+        menu.respond(6);
     }
 
     @Test
@@ -33,7 +33,7 @@ class MenuTest {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        menu.respond(5);
+        menu.respond(10);
 
         verify(out).println("Invalid Option!");
     }

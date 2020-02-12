@@ -7,13 +7,14 @@ public class Librarian {
     private Library library = new Library();
 
     public void checkoutBook(String libraryNumber, String bookName) {
-        if (library.has(bookName)) {
+        if (library.hasBook(bookName)) {
             Book book = library.getBook(bookName);
             record.put(libraryNumber, book);
             library.remove(book);
             System.out.println("Thank you! Enjoy the book");
         } else System.out.println("Sorry, that book is not available");
     }
+
 
 
     public void returnBook(String bookName) {
@@ -40,5 +41,9 @@ public class Librarian {
 
     public void records() {
         record.forEach((libraryNumber, book) -> System.out.println(libraryNumber + " " + book.getName()));
+    }
+
+    public void checkoutMovie(String libraryNumber, String movieName) {
+
     }
 }

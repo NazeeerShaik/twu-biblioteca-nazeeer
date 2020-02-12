@@ -34,7 +34,7 @@ class LibraryTest {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        Assertions.assertTrue(library.has("Refactoring"));
+        Assertions.assertTrue(library.hasBook("Refactoring"));
     }
 
     @Test
@@ -42,7 +42,7 @@ class LibraryTest {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        Assertions.assertFalse(library.has("Java"));
+        Assertions.assertFalse(library.hasBook("Java"));
     }
 
     @Test

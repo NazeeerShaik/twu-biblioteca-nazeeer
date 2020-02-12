@@ -5,10 +5,10 @@ import java.util.List;
 public class Library {
     //TODO: new ArrayList not required
     private List<Book> books = new ArrayList<>(Arrays.asList(new Book("Refactoring", "Martin Fowler", 2018), new Book("NoSQL Distilled", "Pramod J", 2012)));
-    private List<Movie> movieList = new ArrayList<>();
+    private List<Movie> movies = new ArrayList<>();
     Library(){
-        movieList.add(new Movie(2009, "Avatar", "James Cameron", 7.8));
-        movieList.add(new Movie(2019, "Avengers: Endgame", "Russo brothers", 8.5));
+        movies.add(new Movie(2009, "Avatar", "James Cameron", 7.8));
+        movies.add(new Movie(2019, "Avengers: Endgame", "Russo brothers", 8.5));
     }
 
     public void showAllBooks() {
@@ -17,16 +17,16 @@ public class Library {
         }
     }
     public void showAllMovies() {
-        for (Movie movie : movieList) {
+        for (Movie movie : movies) {
             movie.view();
         }
     }
 
     public void checkoutMovie(String movieName) {
 
-        movieList.removeIf(movie -> movie.has(movieName));
+        movies.removeIf(movie -> movie.has(movieName));
     }
-    public boolean has(String bookName) {
+    public boolean hasBook(String bookName) {
         for (Book book : books) {
             if (book.getName().equals(bookName)) return true;
         }
