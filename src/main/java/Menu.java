@@ -23,31 +23,39 @@ public class Menu {
         Scanner in = new Scanner(System.in);
         if (option == viewListOfBooks) library.showAllBooks();
         else if (option == checkoutBook) {
-            String bookName = in.nextLine();
-            String libraryNumber = in.nextLine();
-            String password = in.nextLine();
-            Login login = new Login(libraryNumber, password);
-            if (login.submit()) {
-                librarian.checkoutBook(libraryNumber, bookName);
-            }
+            checkout(in);
 
         } else if (option == returnBook) {
-            String bookName = in.nextLine();
-            String libraryNumber = in.nextLine();
-            String password = in.nextLine();
-            Login login = new Login(libraryNumber, password);
-            if (login.submit()) librarian.returnBook(bookName);
+            returnBook(in);
         } else if (option == quit) System.exit(0);
         else if (option == viewListOfMovies) library.showAllMovies();
         else if (option == checkoutMovie) {
-            String movieName = in.nextLine();
-            String libraryNumber = in.nextLine();
-            String password = in.nextLine();
-            Login login = new Login(libraryNumber, password);
-            if (login.submit()) {
-                librarian.checkoutMovie(libraryNumber, movieName);
-            }
+            checkoutMovie(in);
         } else System.out.println("Invalid Option!");
+    }
+
+    private void checkoutMovie(Scanner in) {
+        String movieName = in.nextLine();
+        String libraryNumber = in.nextLine();
+        String password = in.nextLine();
+        Login login = new Login(libraryNumber, password);
+        if (login.submit()) librarian.checkoutMovie(libraryNumber, movieName);
+    }
+
+    private void returnBook(Scanner in) {
+        String bookName = in.nextLine();
+        String libraryNumber = in.nextLine();
+        String password = in.nextLine();
+        Login login = new Login(libraryNumber, password);
+        if (login.submit()) librarian.returnBook(bookName);
+    }
+
+    private void checkout(Scanner in) {
+        String bookName = in.nextLine();
+        String libraryNumber = in.nextLine();
+        String password = in.nextLine();
+        Login login = new Login(libraryNumber, password);
+        if (login.submit()) librarian.checkoutBook(libraryNumber, bookName);
     }
 
     private void setOptions() {
