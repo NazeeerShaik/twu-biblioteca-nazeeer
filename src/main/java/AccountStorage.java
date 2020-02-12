@@ -2,16 +2,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AccountStorage {
-    List<Account> accountList = new ArrayList<>();
+    private  List<Account> accounts = new ArrayList<>();
 
     AccountStorage() {
-        accountList.add(new Account("123-4567", "password"));
-        accountList.add(new Account("765-4321", "PASS"));
+        accounts.add(new Account("123-4567", "password"));
+        accounts.add(new Account("765-4321", "PASS"));
     }
 
     public boolean check(String libraryNumber, String password) {
         Account loginAccount = new Account(libraryNumber, password);
-        for (Account account : accountList) {
+        for (Account account : accounts) {
             if (account.equals(loginAccount)) return true;
         }
         return false;

@@ -3,7 +3,6 @@ import java.util.Objects;
 public class Account {
     private String libraryNumber;
     private String password;
-
     public Account(String libraryNumber, String password) {
         this.libraryNumber = libraryNumber;
         this.password = password;

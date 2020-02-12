@@ -3,13 +3,13 @@ import java.util.Map;
 
 public class Librarian {
 
-    private Map<String,Book> record = new HashMap<>();
+    private Map<String, Book> record = new HashMap<>();
     private Library library = new Library();
 
-    public void checkout(String libraryNumber,String bookName) {
+    public void checkout(String libraryNumber, String bookName) {
         if (library.has(bookName)) {
             Book book = library.getBook(bookName);
-            record.put(libraryNumber,book);
+            record.put(libraryNumber, book);
             library.remove(book);
             System.out.println("Thank you! Enjoy the book");
         } else System.out.println("Sorry, that book is not available");
@@ -39,6 +39,6 @@ public class Librarian {
     }
 
     public void records() {
-        record.forEach((libraryNumber,book)->System.out.println(libraryNumber+" "+book.getName()));
+        record.forEach((libraryNumber, book) -> System.out.println(libraryNumber + " " + book.getName()));
     }
 }

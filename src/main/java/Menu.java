@@ -4,7 +4,6 @@ public class Menu {
 
     //TODO:Print stream out
     private Library library = new Library();
-    private  Login login;
     private Librarian librarian = new Librarian();
     private Map<Integer, String> options = new HashMap<>();
 
@@ -25,11 +24,16 @@ public class Menu {
             String bookName = in.nextLine();
             String libraryNumber = in.nextLine();
             String password = in.nextLine();
-            login = new Login(libraryNumber,password);
-            if(login.submit()) librarian.checkout(libraryNumber,bookName);
+            Login login = new Login(libraryNumber, password);
+            if (login.submit()){
+               librarian.checkout(libraryNumber, bookName);}
+
         } else if (option == returnBook) {
             String bookName = in.nextLine();
-            librarian.returnBook(bookName);
+            String libraryNumber = in.nextLine();
+            String password = in.nextLine();
+            Login login = new Login(libraryNumber, password);
+            if (login.submit()) librarian.returnBook(bookName);
         } else if (option == quit) System.exit(0);
         else System.out.println("Invalid Option!");
     }
