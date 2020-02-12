@@ -13,7 +13,7 @@ class LibrarianTest {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        librarian.checkout("Refactoring");
+        librarian.checkout("123-4567","Refactoring");
 
         verify(out).println("Thank you! Enjoy the book");
     }
@@ -23,7 +23,7 @@ class LibrarianTest {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        librarian.checkout("hi");
+        librarian.checkout("123-4567","hi");
 
         verify(out).println("Sorry, that book is not available");
     }
@@ -33,7 +33,7 @@ class LibrarianTest {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        librarian.checkout("Refactoring");
+        librarian.checkout("123-4567","Refactoring");
         librarian.returnBook("Refactoring");
 
         verify(out).println("Thank you! Enjoy the book");
@@ -50,5 +50,17 @@ class LibrarianTest {
         librarian.returnBook("Hello");
 
         verify(out).println("That is not a valid book to return");
+    }
+
+    @Test
+    void shouldDisplayDetailsOfRecords() {
+        PrintStream out = mock(PrintStream.class);
+        System.setOut(out);
+
+        librarian.checkout("123-4567","Refactoring");
+        librarian.records();
+
+        verify(out).println("Thank you! Enjoy the book");
+        verify(out).println("123-4567 Refactoring");
     }
 }

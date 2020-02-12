@@ -1,15 +1,15 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Librarian {
 
-    private List<Book> record = new ArrayList<>();
+    private Map<String,Book> record = new HashMap<>();
     private Library library = new Library();
 
-    public void checkout(String bookName) {
+    public void checkout(String libraryNumber,String bookName) {
         if (library.has(bookName)) {
             Book book = library.getBook(bookName);
-            record.add(book);
+            record.put(libraryNumber,book);
             library.remove(book);
             System.out.println("Thank you! Enjoy the book");
         } else System.out.println("Sorry, that book is not available");
@@ -18,10 +18,11 @@ public class Librarian {
 
     public void returnBook(String bookName) {
         if (isInRecords(bookName)) {
-            for (Book book : record) {
-                if (bookName.equals(book.getName())) {
+            for (Map.Entry entry : record.entrySet()) {
+                Book book = (Book) entry.getValue();
+                if (book.has(bookName)) {
                     library.add(book);
-                    record.remove(book);
+                    record.remove(entry);
                     System.out.println("Thank you for returning the book");
                     break;
                 }
@@ -30,9 +31,14 @@ public class Librarian {
     }
 
     private boolean isInRecords(String bookName) {
-        for (Book book : record) {
-            if (bookName.equals(book.getName())) return true;
+        for (Map.Entry entry : record.entrySet()) {
+            Book book = (Book) entry.getValue();
+            if (book.has(bookName)) return true;
         }
         return false;
+    }
+
+    public void records() {
+        record.forEach((libraryNumber,book)->System.out.println(libraryNumber+" "+book.getName()));
     }
 }

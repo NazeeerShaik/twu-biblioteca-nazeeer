@@ -42,7 +42,7 @@ class MenuTest {
     void shouldSuccessMessageOnCheckoutSuccess() {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
-        input("Refactoring");
+        input("Refactoring\n123-4567\npassword");
 
         menu.respond(2);
 
@@ -53,7 +53,7 @@ class MenuTest {
     void shouldSuccessMessageOnCheckoutUnSuccess() {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
-        input("hi");
+        input("hi\n123-4567\npassword");
 
         menu.respond(2);
 
@@ -61,24 +61,18 @@ class MenuTest {
     }
 
     @Test
-    void shouldDisplaySuccessMessageIfReturnValid(){
+    void shouldDisplaySuccessMessageIfReturnValid() {
         PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
-        input("Refactoring");
+        input("Refactoring\n123-4567\npassword");
         menu.respond(2);
 
         input("Refactoring");
         menu.respond(3);
 
-
         verify(out).println("Thank you! Enjoy the book");
         verify(out).println("Thank you for returning the book");
-    }
-
-    private void input(String bookName) {
-        InputStream inputStream = new ByteArrayInputStream(bookName.getBytes());
-        System.setIn(inputStream);
     }
 
     @Test
@@ -90,5 +84,21 @@ class MenuTest {
         menu.respond(3);
 
         verify(out).println("That is not a valid book to return");
+    }
+
+    @Test
+    void shouldSuccessMessageOnCheckoutSuccessAfterSuccessFullLogin() {
+        PrintStream out = mock(PrintStream.class);
+        System.setOut(out);
+        input("Refactoring\n123-4567\npassword");
+
+        menu.respond(2);
+
+        verify(out).println("Thank you! Enjoy the book");
+    }
+
+    private void input(String input) {
+        InputStream inputStream = new ByteArrayInputStream(input.getBytes());
+        System.setIn(inputStream);
     }
 }
