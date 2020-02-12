@@ -11,7 +11,7 @@ public class MovieManagerTest {
 
     @Test
     void shouldDisplayListOfMovies() {
-        PrintStream out =mock(PrintStream.class);
+        PrintStream out = mock(PrintStream.class);
         System.setOut(out);
 
         movieManager.display();
@@ -22,6 +22,22 @@ public class MovieManagerTest {
                 ", name='" + "Avatar" + '\'' +
                 ", director='" + "James Cameron" + '\'' +
                 ", rating=" + 7.8 +
+                '}');
+    }
+
+    @Test
+    void shouldAbleToCheckOutMovie() {
+        PrintStream out = mock(PrintStream.class);
+        System.setOut(out);
+
+        movieManager.checkoutMovie("Avatar");
+        movieManager.display();
+
+        verify(out).println("Movie{" +
+                "year=" + 2019 +
+                ", name='" + "Avengers: Endgame" + '\'' +
+                ", director='" + "Russo brothers" + '\'' +
+                ", rating=" + 8.5 +
                 '}');
     }
 }

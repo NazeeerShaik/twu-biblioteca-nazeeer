@@ -1,8 +1,8 @@
 public class Movie {
-    int year;
-    String name;
-    String director;
-    double rating;
+    private int year;
+    private String name;
+    private String director;
+    private double rating;
 
     public Movie(int year, String name, String director, double rating) {
         this.year = year;
@@ -10,6 +10,7 @@ public class Movie {
         this.director = director;
         this.rating = rating;
     }
+
     public void view() {
         System.out.println("Movie{" +
                 "year=" + year +
@@ -17,5 +18,9 @@ public class Movie {
                 ", director='" + director + '\'' +
                 ", rating=" + rating +
                 '}');
+    }
+
+    public boolean has(String movieName) {
+        return movieName.equals(this.name);
     }
 }
