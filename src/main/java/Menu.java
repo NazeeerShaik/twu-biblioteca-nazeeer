@@ -8,7 +8,7 @@ public class Menu {
     private Map<Integer, String> options = new HashMap<>();
 
 
-    public void displayMenu() {
+    public void display() {
         setOptions();
         options.forEach((key, value) -> System.out.println(key + " " + value));
     }
