@@ -5,7 +5,7 @@ public class Librarian {
 
     private Map<String, Book> record = new HashMap<>();
     private Library library = new Library();
-
+    //TODO ::Magic literls
     public void checkoutBook(String libraryNumber, String bookName) {
         if (library.hasBook(bookName)) {
             Book book = library.getBook(bookName);

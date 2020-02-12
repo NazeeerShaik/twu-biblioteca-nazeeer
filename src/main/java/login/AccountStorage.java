@@ -1,10 +1,12 @@
+package login;
+//TODO: TEST
 import java.util.ArrayList;
 import java.util.List;
 
 public class AccountStorage {
-    private  List<Account> accounts = new ArrayList<>();
+    private List<Account> accounts = new ArrayList<>();
 
-    AccountStorage() {
+    public AccountStorage() {
         accounts.add(new Account("123-4567", "password"));
         accounts.add(new Account("765-4321", "PASS"));
     }

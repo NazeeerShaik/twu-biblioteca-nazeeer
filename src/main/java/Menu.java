@@ -1,3 +1,5 @@
+import login.Login;
+
 import java.util.*;
 
 public class Menu {
@@ -12,8 +14,8 @@ public class Menu {
         setOptions();
         options.forEach((key, value) -> System.out.println(key + " " + value));
     }
-
-    public void respond(int option) {//TODO :if else ladder
+    //TODO:Remove if else ladder
+    public void respond(int option) {
         final int viewListOfBooks = 1;
         final int checkoutBook = 2;
         final int returnBook = 3;
@@ -29,7 +31,7 @@ public class Menu {
         else if (option == checkoutMovie) checkoutMovie(in);
         else System.out.println("Invalid Option!");
     }
-
+    //TODO:Remove Duplication
     private void checkoutMovie(Scanner in) {
         String movieName = in.nextLine();
         String libraryNumber = in.nextLine();
