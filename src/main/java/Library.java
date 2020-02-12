@@ -31,7 +31,7 @@ public class Library {
 
     public boolean hasBook(String bookName) {
         for (Book book : books) {
-            if (book.getName().equals(bookName)) return true;
+            if (book.has(bookName)) return true;
         }
         return false;
     }
