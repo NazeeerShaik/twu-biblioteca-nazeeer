@@ -9,11 +9,11 @@ public class Login {
         this.password = password;
     }
 
-    public boolean submit() {
+    public boolean verify() {
         return accountStorage.check(this.libraryNumber, this.password);
     }
 
     public void viewInformation() {
-        if (submit()) accountInformation.view(this.libraryNumber);
+        if (verify()) accountInformation.view(this.libraryNumber);
     }
 }

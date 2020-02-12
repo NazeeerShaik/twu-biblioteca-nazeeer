@@ -16,7 +16,6 @@ public class Librarian {
     }
 
 
-
     public void returnBook(String bookName) {
         if (isInRecords(bookName)) {
             for (Map.Entry entry : record.entrySet()) {
@@ -43,7 +42,4 @@ public class Librarian {
         record.forEach((libraryNumber, book) -> System.out.println(libraryNumber + " " + book.getName()));
     }
 
-    public void checkoutMovie(String libraryNumber, String movieName) {
-
-    }
 }

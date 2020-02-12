@@ -11,7 +11,7 @@ class LoginTest {
     void shouldReturnTrueIfLoginIsSuccess() {
         Login login = new Login("123-4567", "password");
 
-        Assertions.assertTrue(login.submit());
+        Assertions.assertTrue(login.verify());
 
     }
 
@@ -19,7 +19,7 @@ class LoginTest {
     void shouldReturnFalseIfLoginIsUnSuccess() {
         Login login = new Login("123-4567", "PASS");
 
-        boolean expected = login.submit();
+        boolean expected = login.verify();
 
         Assertions.assertFalse(expected);
     }

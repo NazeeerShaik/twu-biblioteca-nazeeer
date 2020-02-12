@@ -22,16 +22,12 @@ public class Menu {
         final int quit = 6;
         Scanner in = new Scanner(System.in);
         if (option == viewListOfBooks) library.showAllBooks();
-        else if (option == checkoutBook) {
-            checkout(in);
-
-        } else if (option == returnBook) {
-            returnBook(in);
-        } else if (option == quit) System.exit(0);
+        else if (option == checkoutBook) checkout(in);
+        else if (option == returnBook) returnBook(in);
+        else if (option == quit) System.exit(0);
         else if (option == viewListOfMovies) library.showAllMovies();
-        else if (option == checkoutMovie) {
-            checkoutMovie(in);
-        } else System.out.println("Invalid Option!");
+        else if (option == checkoutMovie) checkoutMovie(in);
+        else System.out.println("Invalid Option!");
     }
 
     private void checkoutMovie(Scanner in) {
@@ -39,7 +35,7 @@ public class Menu {
         String libraryNumber = in.nextLine();
         String password = in.nextLine();
         Login login = new Login(libraryNumber, password);
-        if (login.submit()) librarian.checkoutMovie(libraryNumber, movieName);
+        if (login.verify()) library.checkoutMovie(movieName);
     }
 
     private void returnBook(Scanner in) {
@@ -47,7 +43,7 @@ public class Menu {
         String libraryNumber = in.nextLine();
         String password = in.nextLine();
         Login login = new Login(libraryNumber, password);
-        if (login.submit()) librarian.returnBook(bookName);
+        if (login.verify()) librarian.returnBook(bookName);
     }
 
     private void checkout(Scanner in) {
@@ -55,7 +51,7 @@ public class Menu {
         String libraryNumber = in.nextLine();
         String password = in.nextLine();
         Login login = new Login(libraryNumber, password);
-        if (login.submit()) librarian.checkoutBook(libraryNumber, bookName);
+        if (login.verify()) librarian.checkoutBook(libraryNumber, bookName);
     }
 
     private void setOptions() {

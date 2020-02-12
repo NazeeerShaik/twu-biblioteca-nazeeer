@@ -4,11 +4,11 @@ public class BibliotecaApp {
 
     public static void main(String[] args) {
         System.out.println("Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore");
-        Menu menu = new Menu();
-        start(menu);
+        start();
     }
 
-    private static void start(Menu menu) {
+    private static void start() {
+        Menu menu = new Menu();
         do {
             menu.displayMenu();
             Scanner in = new Scanner(System.in);
